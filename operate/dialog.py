@@ -1,38 +1,39 @@
-import sys 
+import sys
 import os
 import platform
+import asyncio
 from prompt_toolkit.shortcuts import message_dialog
 from prompt_toolkit import prompt
-from operate.utils.prompt_util import style
-from operate.exceptions.exceptions import ModelNotRecognizedException
-from operate.prompts.prompt import USER_QUESTION
-from operate.config.settings import Config
-from operate.utils.ansi_colors import (
+from operate.exceptions import ModelNotRecognizedException
+from operate.prompts import USER_QUESTION
+from operate.settings import Config
+from operate.utils.style import (
     ANSI_GREEN,
     ANSI_RESET,
     ANSI_BLUE,
     ANSI_YELLOW,
     ANSI_RED,
     ANSI_BRIGHT_MAGENTA,
+    style,
 )
-from operate.utils.action_util import (
+from operate.utils.os import (
     keyboard_type,
     search,
-    mouse_click,
+    click,
 )
-from operate.actions.api_interactions import get_next_action,summarize
-from operate.utils.utils import parse_response
+from operate.actions import get_next_action, summarize
+from operate.utils.misc import parse_response
 
 # Load configuration
 config = Config()
 
-def main(model, accurate_mode, terminal_prompt, voice_mode=False):
+
+def main(model, terminal_prompt, voice_mode=False):
     """
     Main function for the Self-Operating Computer.
 
     Parameters:
     - model: The model used for generating responses.
-    - accurate_mode: A boolean indicating whether to use accurate mode for response generation.
     - terminal_prompt: A string representing the prompt provided in the terminal.
     - voice_mode: A boolean indicating whether to enable voice mode.
 
@@ -40,9 +41,9 @@ def main(model, accurate_mode, terminal_prompt, voice_mode=False):
     None
     """
     mic = None
-    # Initialize `WhisperMic`, if `voice_mode` is True 
+    # Initialize `WhisperMic`, if `voice_mode` is True
 
-    validation(model, accurate_mode, voice_mode)
+    validation(model, voice_mode)
 
     if voice_mode:
         try:
@@ -102,7 +103,7 @@ def main(model, accurate_mode, terminal_prompt, voice_mode=False):
         if config.debug:
             print("[loop] messages before next action:\n\n\n", messages[1:])
         try:
-            response = get_next_action(model, messages, objective, accurate_mode)
+            response = asyncio.run(get_next_action(model, messages, objective))
 
             action = parse_response(response)
             action_type = action.get("type")
@@ -140,7 +141,7 @@ def main(model, accurate_mode, terminal_prompt, voice_mode=False):
         elif action_type == "TYPE":
             function_response = keyboard_type(action_detail)
         elif action_type == "CLICK":
-            function_response = mouse_click(action_detail)
+            function_response = click(action_detail)
         else:
             print(
                 f"{ANSI_GREEN}[Self-Operating Computer]{ANSI_RED}[Error] something went wrong :({ANSI_RESET}"
@@ -165,27 +166,18 @@ def main(model, accurate_mode, terminal_prompt, voice_mode=False):
             break
 
 
-
-def validation(
-    model,
-    accurate_mode,
-    voice_mode,
-):
+def validation(model, voice_mode):
     """
     Validate the input parameters for the dialog operation.
 
     Args:
         model (str): The model to be used for the dialog operation.
-        accurate_mode (bool): Flag indicating whether to use accuracy mode.
         voice_mode (bool): Flag indicating whether to use voice mode.
 
     Raises:
         SystemExit: If the input parameters are invalid.
 
     """
-    if accurate_mode and model != "gpt-4-vision-preview":
-        print("To use accuracy mode, please use gpt-4-vision-preview")
-        sys.exit(1)
 
     if voice_mode and not config.openai_api_key:
         print("To use voice mode, please add an OpenAI API key")
