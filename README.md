@@ -25,7 +25,7 @@
 - **Future Plans**: Support for additional models.
 
 ## Demo
-https://github.com/OthersideAI/self-operating-computer/assets/42594239/9e8abc96-c76a-46fb-9b13-03678b3c67e0
+https://github.com/hanzoai/computer/assets/42594239/9e8abc96-c76a-46fb-9b13-03678b3c67e0
 
 
 ## Installation
@@ -37,20 +37,20 @@ pip install hanzo-computer
 
 2. **Run the project**
 ```
-compute
+operate
 ```
 
 3. **Enter your OpenAI Key**: If you don't have one, you can obtain an OpenAI key [here](https://platform.openai.com/account/api-keys). If you need you change your key at a later point, run `vim .env` to open the `.env` and replace the old key. 
 
 <div align="center">
-  <img src="https://github.com/OthersideAI/self-operating-computer/blob/main/readme/key.png" width="300"  style="margin: 10px;"/>
+  <img src="https://github.com/hanzoai/computer/blob/main/readme/key.png" width="300"  style="margin: 10px;"/>
 </div>
 
 4. **Give Terminal app the required permissions**: As a last step, the Terminal app will ask for permission for "Screen Recording" and "Accessibility" in the "Security & Privacy" page of Mac's "System Preferences".
 
 <div align="center">
-  <img src="https://github.com/OthersideAI/self-operating-computer/blob/main/readme/terminal-access-1.png" width="300"  style="margin: 10px;"/>
-  <img src="https://github.com/OthersideAI/self-operating-computer/blob/main/readme/terminal-access-2.png" width="300"  style="margin: 10px;"/>
+  <img src="https://github.com/hanzoai/computer/blob/main/readme/terminal-access-1.png" width="300"  style="margin: 10px;"/>
+  <img src="https://github.com/hanzoai/computer/blob/main/readme/terminal-access-2.png" width="300"  style="margin: 10px;"/>
 </div>
 
 ## Using `operate` Modes
@@ -115,11 +115,11 @@ Learn more about Ollama at its [GitHub Repository](https://www.github.com/ollama
 The framework supports voice inputs for the objective. Try voice by following the instructions below. 
 **Clone the repo** to a directory on your computer:
 ```
-git clone https://github.com/OthersideAI/self-operating-computer.git
+git clone https://github.com/hanzoai/computer.git
 ```
 **Cd into directory**:
 ```
-cd self-operating-computer
+cd computer
 ```
 Install the additional `requirements-audio.txt`
 ```
@@ -159,15 +159,13 @@ Start `operate` with the SoM model
 operate -m gpt-4-with-som
 ```
 
-
-
 ## Contributions are Welcomed!:
 
-If you want to contribute yourself, see [CONTRIBUTING.md](https://github.com/OthersideAI/self-operating-computer/blob/main/CONTRIBUTING.md).
+If you want to contribute yourself, see [CONTRIBUTING.md](https://github.com/hanzoai/computer/blob/main/CONTRIBUTING.md).
 
 ## Feedback
 
-For any input on improving this project, feel free to reach out to [Josh](https://twitter.com/josh_bickett) on Twitter. 
+For any input on improving this project, feel free to reach out to [Z](https://twitter.com/zeekay) on Twitter. 
 
 ## Join Our Discord Community
 
@@ -175,11 +173,11 @@ For real-time discussions and community support, join our Discord server.
 - If you're already a member, join the discussion in [#self-operating-computer](https://discord.com/channels/877638638001877052/1181241785834541157).
 - If you're new, first [join our Discord Server](https://discord.gg/YqaKtyBEzM) and then navigate to the [#self-operating-computer](https://discord.com/channels/877638638001877052/1181241785834541157).
 
-## Follow HyperWriteAI for More Updates
+## Follow Hanzo for More Updates
 
 Stay updated with the latest developments:
-- Follow HyperWriteAI on [Twitter](https://twitter.com/HyperWriteAI).
-- Follow HyperWriteAI on [LinkedIn](https://www.linkedin.com/company/othersideai/).
+- Follow HyperWriteAI on [Twitter](https://twitter.com/hanzoai).
+- Follow HyperWriteAI on [LinkedIn](https://www.linkedin.com/company/hanzo-ai/).
 
 ## Compatibility
 - This project is compatible with Mac OS, Windows, and Linux (with X server installed).
