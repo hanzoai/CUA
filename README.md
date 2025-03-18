@@ -170,14 +170,14 @@ For any input on improving this project, feel free to reach out to [Z](https://t
 ## Join Our Discord Community
 
 For real-time discussions and community support, join our Discord server. 
-- If you're already a member, join the discussion in [#self-operating-computer](https://discord.com/channels/877638638001877052/1181241785834541157).
-- If you're new, first [join our Discord Server](https://discord.gg/YqaKtyBEzM) and then navigate to the [#self-operating-computer](https://discord.com/channels/877638638001877052/1181241785834541157).
+- If you're already a member, join the discussion in [#computer]().
+- If you're new, first [join our Discord Server](https://discord.gg/XthHQQj) and then navigate to the [#computer]().
 
 ## Follow Hanzo for More Updates
 
 Stay updated with the latest developments:
-- Follow HyperWriteAI on [Twitter](https://twitter.com/hanzoai).
-- Follow HyperWriteAI on [LinkedIn](https://www.linkedin.com/company/hanzo-ai/).
+- Follow Hanzo on [Twitter](https://twitter.com/hanzoai).
+- Follow Hanzo on [LinkedIn](https://www.linkedin.com/company/hanzo-ai/).
 
 ## Compatibility
 - This project is compatible with Mac OS, Windows, and Linux (with X server installed).
