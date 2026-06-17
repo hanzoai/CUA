@@ -1,4 +1,4 @@
-# cua — AI Assistant Context
+# cua
 
 # Hanzo Computer
 
