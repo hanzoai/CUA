@@ -171,7 +171,7 @@ For any input on improving this project, feel free to reach out to [Z](https://t
 
 For real-time discussions and community support, join our Discord server. 
 - If you're already a member, join the discussion in [#computer]().
-- If you're new, first [join our Discord Server](https://discord.gg/XthHQQj) and then navigate to the [#computer]().
+- If you're new, first [join our Discord Server](https://discord.gg/CJCyAsm9Vr) and then navigate to the [#computer]().
 
 ## Follow Hanzo for More Updates
 
