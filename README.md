@@ -1,5 +1,7 @@
 # Hanzo Computer
 
+[![Open in Hanzo](https://hanzo.app/badges/open-in-hanzo.svg)](https://hanzo.app/dev/open?repo=github.com/hanzoai/CUA&ref=main&action=open) [![Edit with Hanzo](https://hanzo.app/badges/edit-with-hanzo.svg)](https://hanzo.app/dev/open?repo=github.com/hanzoai/CUA&ref=main&action=edit)
+
 <h1 align="center">Self-Operating Computer Framework</h1>
 
 <p align="center">
